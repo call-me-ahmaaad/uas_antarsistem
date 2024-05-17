@@ -20,7 +20,7 @@
             <h3>Figure List</h3>
             <p>Menampilkan daftar action figure di inventori.</p>
         </a>
-        <a class="container card" href="/addFigure">
+        <a class="container card" href={{route('figure.add')}}>
             <h3>Add Figure</h3>
             <p>Menambahkan action figure ke inventori.</p>
         </a>

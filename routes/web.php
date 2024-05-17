@@ -25,7 +25,7 @@ Route::get('/addFigure', function () {
     return view('addFigure', [
         "title" => "ADD FIGURE",
         "favicon" => "addFigure.png"
-    ]);
+    ])->name('figure.add');
 });
 
 Route::post('/simpan-data', [ProdukController::class, 'web_store']);
