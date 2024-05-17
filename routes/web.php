@@ -29,9 +29,9 @@ Route::get('/addFigure', function () {
 })->name('figure.add');
 
 Route::post('/simpan-data', [ProdukController::class, 'web_store']);
-Route::get('/updateFigure/{id}', [ProdukController::class, 'web_edit']);
+Route::get('/updateFigure/{id}', [ProdukController::class, 'web_edit'])->name('figure.edit');
 Route::put('/updateFigure/update-data/{id}', [ProdukController::class, 'web_update']);
-Route::get('/deleteFigure/{id}', [ProdukController::class, 'web_delete']);
+Route::get('/deleteFigure/{id}', [ProdukController::class, 'web_delete'])->name('figure.delete');
 Route::delete('/deleteFigure/destroy-data/{id}', [ProdukController::class, 'web_destroy']);
 
 Route::get('/hanselList', function () {
