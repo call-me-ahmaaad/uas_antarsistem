@@ -12,7 +12,7 @@ class ProdukController extends Controller
             "produks" => Produk::all(),
             "title" => "FIGURE LIST",
             "favicon" => "figureList.png"
-        ]);
+        ])->name('figure.list');
     }
 
     public function web_store(Request $request){
