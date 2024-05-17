@@ -16,7 +16,7 @@
 
     {{-- Container: Navigation Card Button --}}
     <div class="container">
-        <a class="container card" href="/figureList">
+        <a class="container card" href={{asset("/figureList")}}>
             <h3>Figure List</h3>
             <p>Menampilkan daftar action figure di inventori.</p>
         </a>
