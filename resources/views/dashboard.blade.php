@@ -24,11 +24,11 @@
             <h3>Add Figure</h3>
             <p>Menambahkan action figure ke inventori.</p>
         </a>
-        <a class="container card" href={{route('figure.edit')}}>
+        <a class="container card" href="/hanselList">
             <h3>Hansel's Item</h3>
             <p>Menampilkan daftar item di inventori Tim Hansel.</p>
         </a>
-        <a class="container card" href={{route('figure.delete')}}>
+        <a class="container card" href="/addHansel">
             <h3>Add to Hansel</h3>
             <p>Menambahkan item di inventori Tim Hansel.</p>
         </a>
