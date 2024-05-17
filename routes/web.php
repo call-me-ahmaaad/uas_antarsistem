@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('/figureList', [ProdukController::class, 'web_index']);
+Route::get('/figureList', [ProdukController::class, 'web_index'])->name('figure.list');
 
 Route::get('/addFigure', function () {
     return view('addFigure', [
