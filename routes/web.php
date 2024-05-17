@@ -21,12 +21,7 @@ Route::get('/', function () {
 
 Route::get('/figureList', [ProdukController::class, 'web_index'])->name('figure.list');
 
-Route::get('/addFigure', function () {
-    return view('addFigure', [
-        "title" => "ADD FIGURE",
-        "favicon" => "addFigure.png"
-    ]);
-})->name('figure.add');
+Route::get('/addFigure', [ProdukController::class, 'web_addFigure'])->name('figure.add');
 
 Route::post('/simpan-data', [ProdukController::class, 'web_store']);
 Route::get('/updateFigure/{id}', [ProdukController::class, 'web_edit'])->name('figure.edit');

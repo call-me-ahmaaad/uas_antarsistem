@@ -15,6 +15,13 @@ class ProdukController extends Controller
         ]);
     }
 
+    public function web_addFigure() {
+        return view('addFigure', [
+            "title" => "ADD FIGURE",
+            "favicon" => "addFigure.png"
+        ]);
+    }
+
     public function web_store(Request $request){
         $produk = new Produk;
         $produk->nama = $request->nama;
