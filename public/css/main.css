@@ -1,0 +1,328 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.title{
+    color: #009933;
+}
+
+.navbar{
+    background-color: #009933;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.navbar-button{
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    transition: all 0.5s ease;
+}
+
+.navbar-button:hover{
+    background-color: orange;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: chartreuse; */
+}
+
+/* Style untuk table */
+.table-section {
+    display: flex;
+    width: 95%;
+    overflow-x: auto;
+    max-height: 530px;
+    border: 2px solid #009933;
+    border-radius: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    /* border: 2px solid #009933; */
+    width: 100%;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead th {
+    background-color: #009933;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+/* Hover efek */
+
+tbody tr{
+    color: rgb(57, 57, 57);
+    transition: background-color 0.3s ease;
+    font-size: 0.8em;
+}
+
+tbody tr:hover {
+    background-color: #009933;
+    color: white;
+}
+
+/* Alternatif baris warna */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even):hover {
+    background-color: #009933;
+    color: white;
+}
+
+/* Style untuk link dalam tabel */
+.table-link {
+    color: rgb(57, 57, 57);
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.table-link:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+.form-area {
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    color: #009933;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2.5px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    /* -webkit-transition: 0.5s; */
+    transition: border-color 0.5s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus{
+    border-color: #009933;
+}
+
+button[type="submit"] {
+    background-color: #009933;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.5s ease;
+    font-family: "JetBrains Mono", monospace;
+}
+
+button[type="submit"]:hover {
+    background-color: Orange;
+}
+
+.table-delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+}
+
+.table-delete th[scope="row"]{
+    background-color: #009933;
+    color: white;
+}
+
+.table-delete tbody tr {
+    background-color: white;
+}
+
+.table-delete tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table-delete tbody tr:nth-child(odd):hover {
+    background-color: #009933;
+}
+
+.table-delete .button{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.table-delete .button form{
+    margin: 0 20px;
+}
+
+.table-delete .button form button{
+    width: 150px;
+    height: 50px;
+}
+
+.table-delete .button form button{
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: #009933;
+    border: 2px solid #009933;
+}
+
+.table-delete .button form button:hover{
+    background-color: #009933;
+    color: white;
+}
+
+.table-delete .button a{
+    background-color: #009933;
+    margin: 0 20px;
+    width: 200px;
+    height: 50px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.5s ease;
+}
+
+.table-delete .button a:hover{
+    background-color: orange;
+}
+
+.table-update{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+}
+
+.table-update form{
+    width: 100%;
+}
+
+.table-update form table{
+    margin-bottom: 30px;
+}
+
+.table-update th[scope="row"]{
+    background-color: #009933;
+    color: white;
+    width: 100px;
+}
+
+.table-update input[type="text"],
+.table-update input[type="number"],
+.table-update select,
+.table-update textarea {
+    background-color: transparent; /* Mengatur latar belakang menjadi transparan */
+    border: none; /* Menghilangkan border */
+    border-bottom: 1px solid #ccc; /* Menambahkan border bottom */
+    padding: 5px; /* Menambahkan ruang di sekitar input */
+    outline: none; /* Menghilangkan outline saat input di-focus */
+    font-family: "JetBrains Mono", monospace;
+}
+
+.table-update tbody tr:hover input[type="text"],
+.table-update tbody tr:hover input[type="number"],
+.table-update tbody tr:hover select,
+.table-update tbody tr:hover textarea {
+    color: white; /* Mengubah warna teks di dalam input saat dihover */
+}
+
+.table-update form .button{
+    display: flex;
+    flex-direction: row;
+}
+
+.table-update form .button button{
+    width: 200px;
+    height: 50px;
+    background-color: #009933;
+    color: white;
+}
+
+.table-update form .button a{
+    margin: 0 20px;
+    width: 200px;
+    height: 50px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #009933;
+    border-radius: 4px;
+    border: 2px solid #009933;
+    transition: background-color 0.5s ease;
+}
+
+.table-update form .button button:hover{
+    background-color: orange;
+}
+
+.table-update form .button a:hover{
+    background-color: #009933;
+    color: white;
+}
+
+.table-update form .button button, .table-update form .button a{
+    font-size: 0.9em;
+}
+
+.table-update tbody tr {
+    background-color: white;
+}
+
+.table-update tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table-update tbody tr:nth-child(odd):hover {
+    background-color: #009933;
+}
+
+.table-update tbody tr:nth-child(odd):hover td select option{
+    color: black;
+}

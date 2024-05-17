@@ -1,0 +1,61 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 70px 0 0 0;
+    color: #009933;
+}
+
+.container{
+    display: inline-flex;
+    margin: 50px 0;
+}
+
+.container a{
+    margin: 0px 30px 0 30px;
+    background: #f3f3f3;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    text-decoration: none;
+    color: rgb(57, 57, 57);
+}
+
+.container .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .card:hover{
+    background-color: #009933;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container .card:hover h3, .container .card:hover p{
+    color: white;
+}
+
+.team{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    color: rgb(57, 57, 57);
+}
