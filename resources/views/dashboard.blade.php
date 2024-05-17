@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anishop</title>
     <link rel="stylesheet" href={{asset("/css/dashboard.css")}}>
-    <link rel="shortcut icon" href="/img/One Piece.png" type="image/x-icon">
+    <link rel="shortcut icon" href={{asset("/img/One Piece.png")}} type="image/x-icon">
 </head>
 <body>
     {{-- Header: Title Section --}}
