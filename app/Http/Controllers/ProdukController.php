@@ -7,6 +7,7 @@ use App\Models\Produk;
 
 class ProdukController extends Controller
 {
+    // Menampilkan Seluruh Isi Data Tabel Produk di halaman FIGURE LIST
     public function web_index(){
         return view('figureList', [
             "produks" => Produk::all(),
@@ -15,6 +16,7 @@ class ProdukController extends Controller
         ]);
     }
 
+    // Menampilkan Halaman ADD FIGURE
     public function web_addFigure() {
         return view('addFigure', [
             "title" => "ADD FIGURE",
@@ -22,6 +24,7 @@ class ProdukController extends Controller
         ]);
     }
 
+    // Memasukkan data yang sudah diisi di halaman ADD FIGURE ke tabel Produk
     public function web_store(Request $request){
         $produk = new Produk;
         $produk->nama = $request->nama;
@@ -34,6 +37,7 @@ class ProdukController extends Controller
         return redirect('/figureList' );
     }
 
+    // Menampilakan halaman UPDATE FIGURE berdasarkan produk/figure yang dipilih
     public function web_edit(Request $request, $id){
         $produk = Produk::findOrFail($id);
         return view('updateFigure', [
@@ -43,6 +47,7 @@ class ProdukController extends Controller
         ]);
     }
 
+    // Memasukkaan hasil perbaruan ke tabel Produk
     public function web_update(Request $request, $id){
         $produk = Produk::find($id);
         $produk->nama = is_null($request->nama) ? $device->nama : $request->nama;
@@ -55,6 +60,7 @@ class ProdukController extends Controller
         return redirect('figureList');
     }
 
+    // Menampilkan halaman DELETE FIGURE berdasarkan produk/figure yang dipilih
     public function web_delete($id){
         $produk = Produk::findOrFail($id);
         return view('deleteFigure', [
@@ -64,6 +70,7 @@ class ProdukController extends Controller
         ]);
     }
 
+    // Menghapus produk yang dipilih dari tabel Produk
     public function web_destroy($id){
         $deletedProduk = Produk::findOrFail($id);
         $deletedProduk->delete();
@@ -71,6 +78,7 @@ class ProdukController extends Controller
         return redirect('figureList');
     }
 
+    // Fungsi untuk API POST agar dapat menambahkan data di tempat lain atau melalui Postman
     public function api_store(Request $request){
         $produk = new Produk;
         $produk->nama = $request->nama;
@@ -97,10 +105,13 @@ class ProdukController extends Controller
         ], 201);
     }
 
+    // Fungsi untuk API GET agar dapat memperlihatkan isi tabel Produk di tempat lain atau Postman
     public function api_index(){
         return Produk::all();
     }
 
+    // Fungsi untuk mengkonversi data tabel Produk ke dalam bentuk XML
+    // XML akan digunakan oleh pihak lain untuk menampilkan data dari tabel Produk agar dapat ditampilkan di tempatnya
     public function api_xml()
     {
         $produks = Produk::all();

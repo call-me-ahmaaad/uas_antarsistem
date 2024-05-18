@@ -39,7 +39,7 @@
     </table>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('http://127.0.0.1:8000/api/produks/xml')
+            fetch('https://anishop.ahmaaad.web.id/api/produks/xml')
                 .then(response => response.text())
                 .then(data => {
                     let parser = new DOMParser();
