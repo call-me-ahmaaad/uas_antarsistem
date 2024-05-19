@@ -133,4 +133,32 @@ class ProdukController extends Controller
         return response($xml->asXML(), 200)
             ->header('Content-Type', 'application/xml');
     }
+
+    // Fungsi untuk menampilkan XML dari Tim 5 Kelompok Hansel
+    public function web_xml()
+    {
+        $url = 'https://kelompok6.doseninformatika.com/products.php';
+        $xml = simplexml_load_file($url);
+
+        if ($xml === false) {
+            return view('products.index')->withErrors('Error loading XML');
+        }
+
+        $products = [];
+
+        foreach ($xml->product as $product) {
+            $products[] = [
+                'id' => (string) $product->id,
+                'nama' => (string) $product->nama,
+                'deskripsi' => (string) $product->deskripsi,
+                'harga' => number_format((float) $product->harga, 2, ',', '.'),
+                'gambar' => (string) $product->gambar
+            ];
+        }
+
+        return view('hanselList', [
+            "products" => $products,
+            "title" => "TEAM 5 XML",
+        ]);
+    }
 }

@@ -9,5 +9,6 @@ class Produk extends Model
 {
     // Untuk memberi tahu Laravel agar merujuk pada tabel Produk bukan Produks
     protected $table = 'produk';
+
     // use HasFactory;
 }

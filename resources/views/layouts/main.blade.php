@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$title}}</title>
     <link rel="stylesheet" href={{URL::asset("/css/main.css")}}>
-    <link rel="shortcut icon" href="{{ URL::asset('img/' . $favicon) }}" type="image/x-icon">
 </head>
 <body>
     <div class="title">

@@ -39,14 +39,6 @@ Route::put('/updateFigure/update-data/{id}', [ProdukController::class, 'web_upda
 Route::get('/deleteFigure/{id}', [ProdukController::class, 'web_delete'])->name('figure.delete');
 Route::delete('/deleteFigure/destroy-data/{id}', [ProdukController::class, 'web_destroy']);
 
-Route::get('/hanselList', function () {
-    return view('hanselList');
-});
-
-Route::get('/addHansel', function () {
-    return view('addHansel');
-});
-
-Route::get('/xmlTable', function () {
-    return view('xmlTable');
-});
+//* Route untuk menampilkan file XML dari kelompok 5 (Hansel)
+// Menjalankan fungsi web_xml
+Route::get('/hanselList', [ProdukController::class, 'web_xml'])->name('hansel.xml');

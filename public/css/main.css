@@ -326,3 +326,34 @@ button[type="submit"]:hover {
 .table-update tbody tr:nth-child(odd):hover td select option{
     color: black;
 }
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Menentukan lebar kartu */
+}
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+.product-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.2em;
+}
+.product-card p {
+    margin: 0 0 4px;
+    font-size: 0.9em;
+}
