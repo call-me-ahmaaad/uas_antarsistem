@@ -340,7 +340,7 @@ button[type="submit"]:hover {
     margin: 8px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 200px; /* Menentukan lebar kartu */
+    width: 200px;
 }
 .product-card img {
     max-width: 100%;
