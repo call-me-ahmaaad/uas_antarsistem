@@ -27,10 +27,6 @@
             <h3>Hansel's Item</h3>
             <p>Menampilkan daftar item di inventori Tim Hansel.</p>
         </a>
-        <a class="container card" href="/addHansel">
-            <h3>Add to Hansel</h3>
-            <p>Menambahkan item di inventori Tim Hansel.</p>
-        </a>
     </div>
 
     {{-- Footer: Team Info --}}
