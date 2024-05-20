@@ -161,4 +161,10 @@ class ProdukController extends Controller
             "title" => "TEAM 5 XML",
         ]);
     }
+
+    public function hansel_add(){
+        return view('hanselAdd', [
+            "title" => "ADD HANSEL",
+        ]);
+    }
 }
