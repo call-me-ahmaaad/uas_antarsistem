@@ -163,7 +163,7 @@ class ProdukController extends Controller
     }
 
     public function hansel_add(){
-        return view('hanselAdd', [
+        return view('addHansel', [
             "title" => "ADD HANSEL",
         ]);
     }
