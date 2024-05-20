@@ -43,4 +43,4 @@ Route::delete('/deleteFigure/destroy-data/{id}', [ProdukController::class, 'web_
 // Menjalankan fungsi web_xml
 Route::get('/hanselList', [ProdukController::class, 'web_xml'])->name('hansel.xml');
 
-Route::get('/hanselAdd', [ProdukController::class, 'hansel_add'])->name('hansel.add');
+Route::get('/addHansel', [ProdukController::class, 'hansel_add'])->name('hansel.add');
